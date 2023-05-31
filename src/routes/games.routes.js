@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { isLoggedIn } from "../middlewares/protectedRoutes.js";
+import { isLoggedIn, isNotLoggedIn } from "../middlewares/protectedRoutes.js";
 import { validator } from "../middlewares/validator.middleware.js";
 import {
   renderAddGame,
@@ -8,6 +8,7 @@ import {
   deleteGame,
   editGame,
   renderEditGame,
+  renderInfo,
 } from "../controllers/games.controller.js";
 import { createGameSchema } from "../schemas/task.schema.js";
 
@@ -19,5 +20,6 @@ router.post("/add", isLoggedIn, validator(createGameSchema), addGame);
 router.get("/delete/:id", isLoggedIn, deleteGame);
 router.get("/edit/:id", isLoggedIn, renderEditGame);
 router.post("/edit/:id", isLoggedIn, editGame);
+router.get("/info", isNotLoggedIn, renderInfo);
 
 export default router;

@@ -46,3 +46,7 @@ export const editGame = async (req, res) => {
   await req.setFlash("success", "Game Updated Successfully");
   res.redirect("/games");
 };
+
+export const renderInfo = async (req, res) => {
+  res.render('games/info');
+}
