@@ -1,7 +1,7 @@
 import { z } from "zod";
 
-export const createLinkSchema = z.object({
-  title: z
+export const createGameSchema = z.object({
+  name: z
     .string({
       message: "Title must be a string",
     })
@@ -9,13 +9,6 @@ export const createLinkSchema = z.object({
       message: "Title must be at least 3 character",
     })
     .max(100),
-  url: z
-    .string({
-      message: "URL must be a string",
-    })
-    .url({
-      message: "URL must be a valid URL",
-    }),
   description: z
     .string({
       message: "Description must be a string",

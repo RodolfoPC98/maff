@@ -1,31 +1,170 @@
-<div class="container p-4">
-  <div class="row">
-    <div class="col-md-4 mx-auto">
-      <form class="card card-body bg-dark text-white p-5" action="/signup" method="POST">
-        <h3 class="text-center fw-bold mb-4">SignUp</h3>
+<div class="container mt-5 mr-center">
+    <div class="columns is-centered is-mobile">
+        <div class="column is-three-quarters-mobile is-two-thirds-tablet is-three-quarters-desktop">
+            <form class="box" action="/signup" method="POST">
 
-        <label for="fullname">Write your fullname:</label>
-        <input type="type" name="fullname" placeholder="John Doe" class="form-control mb-3" autofocus />
+                <div class="field is-horizontal">
 
-        <label for="username">Write your Email:</label>
-        <input type="email" name="email" placeholder="johndoe123" class="form-control mb-3" />
+                    <div class="field-body">
+                        <div class="field-label control is-expanded ml-5">
+                            <label class="label">Nombre usuario:</label>
+                        </div>
+                        <div class="field">
+                            <p class="control is-expanded has-icons-left">
+                                <input name="nick" class="input" type="text" placeholder="Nombre de usuario">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
 
-        <label for="password">Write your password:</label>
-        <input type="password" name="password1" placeholder="Password" class="form-control mb-3" />
+                    <div class="field-body">
+                        <div class="field-label control is-expanded ml-5">
+                            <label class="label">Email:</label>
+                        </div>
+                        <div class="field">
+                            <p class="control is-expanded has-icons-left has-icons-right">
+                                <input name="email" class="input" type="email" placeholder="alex@smith.com" value="">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
 
-        {{!-- Confirm your password --}}
-        <label for="password">Confirm your password:</label>
-        <input type="password" name="password2" placeholder="Password" class="form-control mb-3" />
+                </div>
 
-        <button class="btn btn-success btn-block">
-          Register
-        </button>
+                <div class="field is-horizontal">
+                    <div class="field-label control is-expanded ml-5">
+                        <label class="label">Nombre completo</label>
+                    </div>
+                    <div class="field-body mr-5">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input name="name" class="input" type="text" placeholder="Nombre">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="field-body mr-5">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input name="last_name" class="input" type="text" placeholder="Apellido paterno">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="field-body mr-5">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input name="mothers_last_name" class="input" type="text"
+                                    placeholder="Apellido materno">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label control is-expanded ml-5">
+                        <label class="label">Estado:</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input name="federal_entity" class="input" type="text" placeholder="Entidad federativa">
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="field-label control is-expanded ml-5">
+                        <label class="label">Municipio:</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input name="municipality" class="input" type="text" placeholder="Municipio">
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="field-label control is-expanded ml-5">
+                        <label class="label">Ciudad:</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input name="city" class="input" type="text" placeholder="Ciudad">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label control is-expanded ml-5">
+                        <label class="label">Dirección</label>
+                    </div>
+                    <div class="field-body mr-5">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input name="address" class="input" type="text" placeholder="Colonia, Calle, Número">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label control is-expanded ml-5">
+                        <label class="label">Fecha de nacimiento:</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input name="birthdate" class="input" type="date">
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="field-label control is-expanded ml-5">
+                        <label class="label">Telefono:</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input name="cell_phone" class="input" type="text">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-body">
+                        <div class="field-label control is-expanded ml-5">
+                            <label class="label">Contraseña:</label>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input name="password1" class="input" type="password" placeholder="********">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field-body">
+                        <div class="field-label control is-expanded ml-5">
+                            <label class="label">Confirma:</label>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input name="password2" class="input" type="password" placeholder="********">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="fs-5 text-center text-white mt-3">Do you already have an account?
+
+                <div class="field m-5 p-5">
+                    <button class="button is-warning is-pulled-right">Registrar</button>
+                </div>
+
+            </form>
+        </div>
     </div>
-    </form>
-
-    {{! Link }}
-    <p class="fs-5 text-center text-white mt-3">Do you already have an account?
-      <a href="/signin" class="text-info">Signin</a>
-    </p>
-  </div>
 </div>

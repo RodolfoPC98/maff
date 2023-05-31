@@ -6,10 +6,10 @@ export const database = {
   host: process.env.DATABASE_HOST || "localhost",
   user: process.env.DATABASE_USER || "root",
   password: process.env.DATABASE_PASSWORD || "",
-  database: process.env.DATABASE_NAME || "linksdb",
+  database: process.env.DATABASE_NAME || "educational_app",
   port: process.env.DATABASE_PORT || 3306,
 };
 
-export const port = process.env.PORT || 4300;
+export const port = process.env.PORT || 4000;
 
 export const SECRET = process.env.SECRET || 'some secret key';

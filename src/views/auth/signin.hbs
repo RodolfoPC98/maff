@@ -1,5 +1,8 @@
 <div class="container p-4">
-  <div class="row">
+  <div class="row mx-auto">
+    <div class="col-md-4 mx-auto">
+      <img src="img/imgLogin.png" alt="">
+    </div>
     <div class="col-md-4 mx-auto">
       <form
         action="/signin"
@@ -7,7 +10,7 @@
         class="card card bg-dark text-white p-4"
       >
         <h3 class="text-center my-3">
-          SignIn
+          Iniciar sesión
         </h3>
 
         <img
@@ -18,7 +21,7 @@
         <div class="card-body">
           {{! Email }}
           <label for="username" class="fw-light fs-6 mb-2">
-            Write a Email:
+            Escribe un email:
           </label>
           <input
             type="text"
@@ -29,18 +32,18 @@
           />
 
           <label for="password">
-            Write your Password:
+            Escribe una contraseña:
           </label>
           <div class="form-group">
             <input
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder="Contraseña"
               class="form-control mb-3"
             />
           </div>
           <button class="btn btn-primary btn-block">
-            Login
+            Acceder
           </button>
         </div>
       </form>
@@ -49,7 +52,7 @@
       <p class="fs-5 text-center mt-3 text-light">
         Don't have an Account?
         <a href="/signup" class="text-info">
-          Signup
+          Registrarse
         </a>
       </p>
     </div>

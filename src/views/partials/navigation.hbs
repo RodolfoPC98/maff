@@ -1,20 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-warning warning">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <i class="fas fa-link"></i>
-      Favorite Links
+      <i><img style="width: 40%;" src="img/logo.png" alt="Logo"></i>
+      MAFF
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         {{#if user}}
@@ -27,12 +17,12 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              links
+              Solicitud de Juegos
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/links">All Links</a>
+              <a class="dropdown-item" href="/games">Todas las sugerencias</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/links/add">Add A Link</a>
+              <a class="dropdown-item" href="/games/add">Añadir una sugerencia</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -44,19 +34,19 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              {{user.fullname}}
+              {{user.nick}}
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/profile">Profile</a></li>
-              <li><a class="dropdown-item" href="/logout">Logout</a></li>
+              <li><a class="dropdown-item" href="/profile">Profil</a></li>
+              <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
             </ul>
           </li>
         {{else}}
           <li class="nav-item">
-            <a class="nav-link" href="/signin">SignIn</a>
+            <a class="nav-link" href="/signin">Acceder</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/signup">SignUp</a>
+            <a class="nav-link" href="/signup">Registrarse</a>
           </li>
         {{/if}}
       </ul>

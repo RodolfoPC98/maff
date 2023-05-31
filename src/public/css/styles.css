@@ -1,5 +1,5 @@
 body {
-  background: #141518;
+  background: #eee;
   font-family: "Oswald", sans-serif;
   overflow: hidden;
   height: 100vh;
@@ -11,7 +11,7 @@ body {
 }
 
 .navbar {
-  background: black !important;
+  background: #cccc00 !important;
 }
 
 .nav-link {
@@ -25,7 +25,7 @@ body {
   height: 100%;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .9)), url("/img/background.jpeg");
+  background: url("/img/background.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
