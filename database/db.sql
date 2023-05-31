@@ -1,42 +1,77 @@
-CREATE DATABASE IF NOT EXISTS linksdb;
+-- Creating the database.
+CREATE DATABASE educational_app;
 
-USE linksdb;
+-- Using the database.
+use educational_app;
 
--- TABLE USER
--- all pasword wil be encrypted using SHA2
-CREATE TABLE users (
-  id INT(11) NOT NULL AUTO_INCREMENT,
-  fullname VARCHAR(100) NOT NULL,
-  email VARCHAR(100) NOT NULL,
-  password VARCHAR(60) NOT NULL,
-  created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (id)
-) AUTO_INCREMENT=2;
-
--- drop table users
-
-DESCRIBE users;
-
-INSERT INTO users (id, email, password, fullname) 
-  VALUES (1, 'john', 'john@gmail.com', 'John Carter');
-
-SELECT * FROM users;
-
--- LINKS TABLE
-CREATE TABLE links (
-  id INT(11) NOT NULL,
-  title VARCHAR(150) NOT NULL,
-  url VARCHAR(255) NOT NULL,
-  description TEXT,
-  user_id INT(11),
-  created_at timestamp NOT NULL DEFAULT current_timestamp,
-  CONSTRAINT fk_user FOREIGN KEY(user_id) REFERENCES users(id)
+-- Creating the roles table.
+CREATE TABLE roles(
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    role VARCHAR(50) NOT NULL
 );
 
-ALTER TABLE links
-  ADD PRIMARY KEY (id);
+-- Creating the parent table.
+CREATE TABLE users(
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+    nick VARCHAR(60) NOT NULL,
+    name VARCHAR(90) NOT NULL,
+    last_name VARCHAR(60) NOT NULL,
+    mothers_last_name VARCHAR(60) NOT NULL,
+    federal_entity VARCHAR(60) NOT NULL,
+    municipality VARCHAR(60) NOT NULL,
+    city VARCHAR(60) NOT NULL,
+    address VARCHAR(100),
+    birthdate DATE NOT NULL,
+    age INT(3),
+    email VARCHAR(80) NOT NULL,
+    cell_phone VARCHAR(15),
+    gender VARCHAR(15),
+    password VARCHAR(100) NOT NULL,
+    curp VARCHAR(18),
+    registration_date TIMESTAMP NOT NULL DEFAULT current_timestamp
+);
 
-ALTER TABLE links
-  MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;
+-- Creating the children table.
+CREATE TABLE child (
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nick VARCHAR(60) NOT NULL,
+    name VARCHAR(90) NOT NULL,
+    last_name VARCHAR(60) NOT NULL,
+    mothers_last_name VARCHAR(60) NOT NULL,
+    id_related INT(10),
+    birthdate DATE NOT NULL,
+    age INT(3),
+    gender VARCHAR(15),
+    id_role INT(6),
+    password VARCHAR(100) NOT NULL,
+    image VARCHAR(120),
+    registration_date TIMESTAMP NOT NULL DEFAULT current_timestamp
+);
 
-DESCRIBE links;
+-- Creating the game table.
+CREATE TABLE games(
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(40) NOT NULL,
+    description VARCHAR(255) NOT NULL,
+    id_user INT(11),
+    registration_date TIMESTAMP NOT NULL DEFAULT current_timestamp
+);
+
+-- Creating the scores table.
+CREATE TABLE scores(
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    idUser VARCHAR(60) NOT NULL,
+    gameId INT(6) NOT NULL,
+    gameScore INT (20) NOT NULL,
+    registration_date TIMESTAMP NOT NULL DEFAULT current_timestamp 
+);
+
+-- to show all tables.
+SHOW TABLES;
+
+-- to describe the tables.
+describe roles;
+describe users;
+describe child;
+describe games;
+describe scores;
