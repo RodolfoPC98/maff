@@ -1,22 +1,88 @@
 <nav class="navbar navbar-expand-lg navbar-warning warning">
   <div class="container">
-    <a class="navbar-brand" href="/">
-      <i><img style="width: 40%;" src="img/logo.png" alt="Logo"></i>
+    <a class="navbar-brand" style="align-items: center; font-size:xx-large" href="/">
+      <i><img class="img-logo" style="width: 50%;" src="img/logo.png" alt="Logo"></i>
       MAFF
     </a>
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link" href="games/info" role="button" aria-expanded="false">
+          <a class="nav-link" href="/info" role="button" aria-expanded="false">
             Información
           </a>
         </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Tarjetas
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" target="_black" href="/fauna">Fauna</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" target="_black" href="https://www.youtube.com/watch?v=uwEGrB7fSgo">Flora</a>
+          </div>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            PDFs
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" target="_black" href="src/public/pdfs/medio-ambiente.pdf">Medio ambiente</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" target="_black" href="src/public/pdfs/ayuda-conservacion.pdf">Conservación del
+              medio ambiente</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" target="_black"
+              href="https://cuentosparadormir.com/infantiles/cuentos-de-plantas">Minicuentos sobre plantas</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" target="_black"
+              href="https://www.cuentosyrecetas.com/category/cuentos-de-animales/">Mini cuentos de animales</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" target="_black" href="src/public/pdfs/mamiferos.pdf">Conoce los animales
+              mamiferos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" target="_black" href="src/public/pdfs/bichos.pdf">Conoce la vida de los bichos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" target="_black"
+              href="https://www.orientacionandujar.es/2016/07/08/libritos-divertidos-animales-colorear/">Animales para
+              colorear</a>
+          </div>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Vídeos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" target="_black" href="https://www.youtube.com/watch?v=uwEGrB7fSgo">Flora y
+              Fauna</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" target="_black" href="https://www.youtube.com/watch?v=2gFdGx0wllA">La Flora</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" target="_black" href="https://www.youtube.com/watch?v=ga9tXF4Qm2o">La Fauna</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" target="_black" href="https://www.youtube.com/watch?v=8UqBuUSn3hY">El medio
+              ambiente</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" target="_black" href="https://www.youtube.com/watch?v=ga9tXF4Qm2o">Cuidar el medio
+              ambiente</a>
+          </div>
+        </li>
+
+
         {{#if user}}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
-            Solicitud de Juegos
+            Sugerencias
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/games">Todas las sugerencias</a>
@@ -30,7 +96,7 @@
             {{user.nick}}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/profile">Profil</a></li>
+            <li><a class="dropdown-item" href="/profile">Perfil</a></li>
             <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
           </ul>
         </li>

@@ -13,7 +13,7 @@ CREATE TABLE roles(
 -- Creating the parent table.
 CREATE TABLE users(
     id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-    nick VARCHAR(60) NOT NULL,
+    nick VARCHAR(60) NOT NULL,x
     name VARCHAR(90) NOT NULL,
     last_name VARCHAR(60) NOT NULL,
     mothers_last_name VARCHAR(60) NOT NULL,
